@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "share-expenses-tg-bot-v2"
+version = "1"
+description = ""
+authors = ["Rufat K <Rufat@kocherbaev.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = "^1.0.0"
+fastapi = "^0.103.2"
+uvicorn = "^0.23.2"
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.22"}
+aiogram = "^3.1.1"
+pydantic-settings = "^2.0.3"
+aiosqlite = "^0.19.0"
+alembic = "^1.12.0"
+
+
+[tool.poetry.group.test.dependencies]
+httpx = "^0.25.0"
+mypy = "^1.5.1"
+pytest = "^7.4.2"
+pylint = "^3.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
