@@ -50,5 +50,6 @@ async def update_telegram_user(
 async def delete_telegram_user(
         session: AsyncSession,
         telegram_user: TelegramUser) -> None:
+    await session.refresh(telegram_user)
     await session.delete(telegram_user)
     # await session.commit()
